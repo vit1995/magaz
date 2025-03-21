@@ -7992,14 +7992,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
-@media (max-width: 25em) {
-  .header__search {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 84%;
-            flex: 0 1 84%;
-  }
-}
-
 @media (max-width: 20em) {
   .popup-login__title {
     font-size: 1.125rem;
@@ -9754,8 +9746,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .header__search {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 87%;
-            flex: 0 1 87%;
+        -ms-flex: 0 1 84%;
+            flex: 0 1 84%;
   }
 
   .header__search-input {
