@@ -5079,7 +5079,7 @@
                 modules: [ Navigation, Pagination ],
                 observer: true,
                 observeParents: true,
-                slidesPerView: 1.3,
+                slidesPerView: 2,
                 spaceBetween: 10,
                 autoHeight: true,
                 speed: 800,
@@ -5092,11 +5092,6 @@
                     nextEl: ".popular-swiper-button-next"
                 },
                 breakpoints: {
-                    440: {
-                        slidesPerView: 1.8,
-                        spaceBetween: 10,
-                        autoHeight: true
-                    },
                     568: {
                         slidesPerView: 2,
                         spaceBetween: 20
@@ -5116,7 +5111,7 @@
                 modules: [ Navigation, Pagination ],
                 observer: true,
                 observeParents: true,
-                slidesPerView: 1.3,
+                slidesPerView: 2,
                 spaceBetween: 10,
                 autoHeight: true,
                 speed: 800,
@@ -5129,11 +5124,70 @@
                     nextEl: ".new-swiper-button-next "
                 },
                 breakpoints: {
-                    440: {
-                        slidesPerView: 1.8,
-                        spaceBetween: 10,
-                        autoHeight: true
+                    568: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
                     },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    1170: {
+                        slidesPerView: 4,
+                        spaceBetween: 30
+                    }
+                },
+                on: {}
+            });
+            if (document.querySelector(".action__slider")) new core(".action__slider", {
+                modules: [ Navigation, Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 2,
+                spaceBetween: 10,
+                autoHeight: true,
+                speed: 800,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                navigation: {
+                    prevEl: ".action-swiper-button-prev",
+                    nextEl: ".action-swiper-button-next"
+                },
+                breakpoints: {
+                    568: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    1170: {
+                        slidesPerView: 4,
+                        spaceBetween: 30
+                    }
+                },
+                on: {}
+            });
+            if (document.querySelector(".stock__slider")) new core(".stock__slider", {
+                modules: [ Navigation, Pagination ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 2,
+                spaceBetween: 10,
+                autoHeight: true,
+                speed: 800,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                navigation: {
+                    prevEl: ".stock-swiper-button-prev",
+                    nextEl: ".stock-swiper-button-next"
+                },
+                breakpoints: {
                     568: {
                         slidesPerView: 2,
                         spaceBetween: 20
@@ -7273,19 +7327,23 @@ PERFORMANCE OF THIS SOFTWARE.
                 e.preventDefault();
             }
             if (targetElement.closest(".header__catalog")) {
-                if (catalogList) if (catalogList.classList.contains("catalog-menu-open")) {
-                    catalogList.classList.remove("catalog-menu-open");
-                    document.documentElement.classList.remove("body-catalog-open");
-                } else {
-                    catalogList.classList.add("catalog-menu-open");
-                    document.documentElement.classList.add("body-catalog-open");
-                    document.documentElement.classList.add("menu-open");
+                if (catalogList) {
+                    document.documentElement.classList.toggle("lock");
+                    if (catalogList.classList.contains("catalog-menu-open")) {
+                        catalogList.classList.remove("catalog-menu-open");
+                        document.documentElement.classList.remove("body-catalog-open");
+                    } else {
+                        catalogList.classList.add("catalog-menu-open");
+                        document.documentElement.classList.add("body-catalog-open");
+                        document.documentElement.classList.add("menu-open");
+                    }
                 }
                 e.preventDefault();
             }
             if (targetElement.closest(".button-menu-phone")) {
                 document.documentElement.classList.toggle("body-catalog-open");
                 document.documentElement.classList.toggle("menu-open");
+                document.documentElement.classList.toggle("lock");
                 if (catalogList) catalogList.classList.toggle("catalog-menu-open");
                 e.preventDefault();
             }
