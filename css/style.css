@@ -1430,7 +1430,7 @@ body::after {
   -webkit-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  z-index: 3;
+  z-index: 11;
   border-radius: 0.625rem;
 }
 
@@ -1771,7 +1771,7 @@ body::after {
   position: absolute;
   top: 110%;
   min-width: 100%;
-  z-index: 100;
+  z-index: 14;
   -webkit-transform-origin: 0 0;
       -ms-transform-origin: 0 0;
           transform-origin: 0 0;
@@ -1986,6 +1986,10 @@ body::after {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 0.1875rem;
+}
+
+.menu-phone__button.active-menu-phone {
+  opacity: 1;
 }
 
 .menu-phone__button svg {
@@ -9388,7 +9392,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     background-color: #ededed;
     left: -100%;
     top: 0;
-    z-index: 4;
+    z-index: 12;
     padding: 6.25rem 1.875rem 1.875rem 1.875rem;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;

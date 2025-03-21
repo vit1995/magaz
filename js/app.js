@@ -7347,15 +7347,21 @@ PERFORMANCE OF THIS SOFTWARE.
                 if (catalogList) catalogList.classList.toggle("catalog-menu-open");
                 e.preventDefault();
             }
-            if (targetElement.closest(".menu-catalog__back")) {
-                document.documentElement.classList.remove("catalog-open");
-                document.querySelectorAll("._sub-menu-active").forEach((activeLink => {
-                    activeLink.classList.remove("_sub-menu-active");
+            if (targetElement.closest(".menu-phone__button") && targetElement.classList.contains("menu-phone__button")) {
+                const buttons = document.querySelectorAll(".menu-phone__button");
+                buttons.forEach((button => {
+                    button.classList.remove("active-menu-phone");
                 }));
-                document.querySelectorAll("._sub-menu-open").forEach((activeBlock => {
-                    activeBlock.classList.remove("_sub-menu-open");
-                }));
+                targetElement.classList.add("active-menu-phone");
                 e.preventDefault();
+            }
+            const targetElementMenu = e.target.closest(".menu-phone__button");
+            if (targetElementMenu) {
+                const buttons = document.querySelectorAll(".menu-phone__button");
+                buttons.forEach((button => {
+                    button.classList.remove("active-menu-phone");
+                }));
+                targetElementMenu.classList.toggle("active-menu-phone");
             }
             if (targetElement.closest(".sub-menu-catalog__back")) {
                 document.documentElement.classList.remove("sub-menu-open");
