@@ -10,7 +10,7 @@
 			opacity: 1;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250321115002">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250322010132">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -146,29 +146,36 @@
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 
 				</div>
-				<div class="header__main">
-					<a href="#" class="header__logo"><img src="img/header/logo.svg" alt="#"></a>
-					<button class="header__catalog">
-						<img class="header__catalog-icon" src="img/header/catalog.svg" alt="#">
-						<p class="header__catalog-text">КАТАЛОГ</p>
+				<div class="header__main-body">
+					<div class="header__main">
+						<a data-da=".header__main-body, 768,0" href="#" class="header__logo"><img src="img/header/logo.svg" alt="#">
 
-					</button>
-					<form class="header__search">
-						<input autocomplete="off" type="text" name="search" placeholder="Поиск по сайту" class="header__search-input input">
-						<button class="header__search-button" type="submit"><img src="img/header/search.png" alt="#"></button>
-					</form>
-					<div class="header__tools">
-						<!-- <button class="header__money">
-					<img src="img/header/money.svg" alt="#">
-				</button> -->
-						<button class="header__bookmark">
-							<img src="img/header/bookmark.svg" alt="">
+						</a>
+						<button class="header__catalog">
+							<img class="header__catalog-icon" src="img/header/catalog.svg" alt="#">
+							<p class="header__catalog-text">КАТАЛОГ</p>
 
 						</button>
+						<form class="header__search">
+							<input autocomplete="off" type="text" name="search" placeholder="Поиск по сайту" class="header__search-input input">
+							<button class="header__search-button" type="submit"><img src="img/header/search.png" alt="#"></button>
+						</form>
+						<div class="header__tools">
+							<!-- <button class="header__money">
+						<img src="img/header/money.svg" alt="#">
+					</button> -->
+							<button class="header__bookmark">
+								<img src="img/header/bookmark.svg" alt="">
+
+							</button>
+						</div>
+						<a data-popup="#popup" data-da=".menu, 992" href="#" class="header__login">
+							Войти
+						</a>
+						<button style="z-index: 100;" data-da=".header__logo, 768" type="button" class="menu__icon icon-menu icon-menu-mob"><span></span></button>
+
 					</div>
-					<a data-popup="#popup" data-da=".menu, 992" href="#" class="header__login">
-						Войти
-					</a>
+
 				</div>
 				<div class="header__menu menu">
 					<nav class="menu__body">
@@ -183,6 +190,7 @@
 						</ul>
 					</nav>
 				</div>
+
 				<!-- это католог , что бы добавить под меню нужно свзять для button data-parent="4" а под меню data-submenu="4"(и не забывает в кнопке должна быть arrow) -->
 				<nav class="header__catalog-body catalog-header">
 					<h2 class="catalog-header__title">Каталог</h2>
@@ -781,7 +789,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250321115002"></script>
+	<script src="js/app.min.js?_v=20250322010132"></script>
 </body>
 
 </html>
